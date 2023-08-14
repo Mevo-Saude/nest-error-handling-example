@@ -14,4 +14,11 @@ export class AppController {
   getAnimal(@Query('animal') animal: string): any {
     return this.appService.searchForAnimal(animal);
   }
+
+  @Get('/hello-cat')
+  helloCat() {
+    return {
+      meow: 'meow',
+    };
+  }
 }
